@@ -5,9 +5,9 @@
   "main": "gruntfile.js",
   "private": true,
   "scripts": {
-    "dev" : "grunt nodemon",
-    "test": "make test",
-    "build": "grunt build"
+    "test": "NODE_ENV=test make test",
+    "start": "NODE_ENV=development grunt nodemon",
+    "build": "NODE_ENV=production grunt nodemon"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,9 @@
     "grunt-rigger": "^0.6.0",
     "grunt-sass": "^1.0.0",
     "grunt-svg-sprite": "^1.2.5",
+    "mocha": "^2.3.3",
+    "should": "^7.1.0",
+    "supertest": "^1.1.0",
     "time-grunt": "^1.2.1"
   },
   "dependencies": {
@@ -53,6 +56,7 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-session": "^1.11.3",
+    "http-proxy": "^1.11.2",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
     "mongoose": "^4.1.6",

@@ -1,4 +1,4 @@
 module.exports = {
 	sessionSecret: 'fjdsiYEU8348nfDsdjfnew27fsdxE',
-	db: 'mongodb://localhost/express'
+	db: 'mongodb://localhost/express_dev'
 };
