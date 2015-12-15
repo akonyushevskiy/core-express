@@ -1,4 +1,5 @@
 module.exports = {
-	sessionSecret: 'IoRnMvqDi9UMx84y89jnv1nh',
-	db: 'mongodb://localhost/express'
+	sessionSecret: 'fjdsiYEU8348nfDsdjfnew27fsdxE',
+	db: 'mongodb://localhost/chpokify_dev',
+	port: 3001
 };

@@ -1,9 +1,0 @@
-{
-  "_main": {
-    "path_to_layout": "dev/_index.ejs",
-    "path_to_data": [
-      "dev/data/global.json",
-      {"dev/data/meta.json": "_index"}
-    ]
-  }
-}

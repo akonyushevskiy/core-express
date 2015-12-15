@@ -1,13 +1,13 @@
 {
   "name": "core-express",
-  "version": "1.0.0",
-  "description": "Core template for better than express project",
-  "main": "gruntfile.js",
-  "private": true,
+  "version": "1.0.1",
+  "description": "Template for express application with simple auth, test and config bootstrap",
+  "main": "server.js",
+  "private": false,
   "scripts": {
     "test": "NODE_ENV=test make test",
-    "start": "NODE_ENV=development grunt nodemon",
-    "build": "NODE_ENV=production grunt nodemon"
+    "start": "NODE_ENV=development nodemon server.js -e js,ejs --ignore public/ --ignore node_modules/",
+    "production": "NODE_ENV=production forever start server.js"
   },
   "repository": {
     "type": "git",
@@ -26,27 +26,9 @@
   },
   "homepage": "https://github.com/akonyushevskiy/core-express",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-combine-media-queries": "^1.0.19",
-    "grunt-concurrent": "^2.0.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-csso": "^0.7.1",
-    "grunt-ejs-static": "^0.4.3",
-    "grunt-newer": "^1.1.1",
-    "grunt-nodemon": "^0.4.0",
-    "grunt-rigger": "^0.6.0",
-    "grunt-sass": "^1.0.0",
-    "grunt-svg-sprite": "^1.2.5",
     "mocha": "^2.3.3",
     "should": "^7.1.0",
-    "supertest": "^1.1.0",
-    "time-grunt": "^1.2.1"
+    "supertest": "^1.1.0"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
@@ -63,9 +45,6 @@
     "mongoose-deep-populate": "^2.0.1",
     "morgan": "^1.6.1",
     "passport": "^0.3.0",
-    "passport-local": "^1.0.0",
-    "passport-remember-me": "0.0.1",
-    "rand-token": "^0.2.1",
-    "xml2js": "^0.4.12"
+    "passport-local": "^1.0.0"
   }
 }
