@@ -15,7 +15,7 @@ module.exports = function() {
 	var app = express();
 
 	app.locals.title = "Express application";
-	app.locals.port = '3001';
+	app.locals.port = config.port;
 
 	/*
 	    Middleware
@@ -48,7 +48,7 @@ module.exports = function() {
 	/*
 	    Static files
 	 */
-	app.use(express.static('./build'));
+	app.use(express.static('./public'));
 
 
 	/*
