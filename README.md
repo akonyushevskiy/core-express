@@ -1,4 +1,4 @@
-# core express
+# Express template
 
 Template for express application with simple auth, test, docs and config bootstrap.
 

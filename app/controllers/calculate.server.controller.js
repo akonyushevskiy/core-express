@@ -15,21 +15,26 @@
 *   }
 *  @apiError UserNotFound The id of the User was not found.
 *  @apiErrorExample Error-Response:
-*     HTTP/1.1 404 Not Found
+*     HTTP/1.1 500 One of params is not a number
 *     {
-*       "error": "UserNotFound"
+*       "error": "One of params is not a number"
 *     }
 */
 
 //@apiSampleRequest /api/calculate/sum/?a=1&b=2
 exports.sum = function(req, res){
 	"use strict";
-	var obj = {
-		a : req.param('a') || 0,
-		b : req.param('b') || 0
-	};
+	var a = req.query.a || 0,
+		b = req.query.b || 0;
 
-	res.json({
-		sum : parseInt(obj.a) + parseInt(obj.b)
+	if(isNaN(parseInt(a, 10)) || isNaN(parseInt(b, 10))){
+		res.status(500).json({
+			error: "One of is params not a number"
+		});
+		return;
+	}
+
+	res.status(200).json({
+		sum : parseInt(a, 10) + parseInt(b, 10)
 	});
 };

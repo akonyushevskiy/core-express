@@ -1,0 +1,5 @@
+
+before(function(){
+	"use strict";
+
+});

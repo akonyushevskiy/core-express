@@ -5,7 +5,7 @@
   "main": "server.js",
   "private": false,
   "scripts": {
-    "test": "NODE_ENV=test make test",
+    "test": "NODE_ENV=test mocha tests/** --reporter spec",
     "start": "NODE_ENV=development nodemon server.js -e js,ejs --ignore public/ --ignore node_modules/",
     "production": "NODE_ENV=production forever start server.js",
     "generate-docs": "apidoc -i app/ -o public/apidoc/"
@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/akonyushevskiy/core-express",
   "devDependencies": {
-    "mocha": "^2.3.3",
     "should": "^8.0.1",
     "supertest": "^1.1.0"
   },
