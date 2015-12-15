@@ -7,7 +7,12 @@
   "scripts": {
     "test": "NODE_ENV=test make test",
     "start": "NODE_ENV=development nodemon server.js -e js,ejs --ignore public/ --ignore node_modules/",
-    "production": "NODE_ENV=production forever start server.js"
+    "production": "NODE_ENV=production forever start server.js",
+    "generate-docs": "apidoc -i app/ -o public/apidoc/"
+  },
+  "apidoc": {
+    "title": "Core express API documentation",
+    "url" : "https://127.0.0.1:3001/apidoc/"
   },
   "repository": {
     "type": "git",
@@ -27,7 +32,7 @@
   "homepage": "https://github.com/akonyushevskiy/core-express",
   "devDependencies": {
     "mocha": "^2.3.3",
-    "should": "^7.1.0",
+    "should": "^8.0.1",
     "supertest": "^1.1.0"
   },
   "dependencies": {
@@ -45,6 +50,6 @@
     "mongoose-deep-populate": "^2.0.1",
     "morgan": "^1.6.1",
     "passport": "^0.3.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "1.0.0"
   }
 }
