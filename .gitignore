@@ -3,6 +3,7 @@
 .idea/
 .settings/
 *.log
+public/apidoc
 
 
 # OS generated files
