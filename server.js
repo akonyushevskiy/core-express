@@ -7,15 +7,14 @@ var mongoose = require('./config/mongoose'),
 	passport = require('./config/passport'),
 	db = mongoose(),
 	app = express(),
-	passport = passport();
+	passport = passport(),
+	server = app.listen(app.locals.port);;
 
 
-app.listen(app.locals.port);
 
-module.exports = app;
 
 console.log(process.env.NODE_ENV);
-
 console.log('Server running at http://localhost:' + app.locals.port + '/ at ' + process.env.NODE_ENV + ' environment');
 
+module.exports = server;
 

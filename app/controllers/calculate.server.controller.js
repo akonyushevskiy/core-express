@@ -29,7 +29,7 @@ exports.sum = function(req, res){
 
 	if(isNaN(parseInt(a, 10)) || isNaN(parseInt(b, 10))){
 		res.status(500).json({
-			error: "One of is params not a number"
+			error: "One of params is not a number"
 		});
 		return;
 	}
